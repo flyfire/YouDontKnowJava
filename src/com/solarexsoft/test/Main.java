@@ -14,6 +14,16 @@ public class Main {
         getParamizedParameterType();
         getParamizedFieldType();
         testGenerics();
+        testIncrement();
+    }
+
+    private static void testIncrement() {
+        int count = 0;
+        for (int i = 0; i < 100; i++) {
+            count = count++;
+            System.out.println("i = " + i + ",count = " + count);
+        }
+        System.out.println(count);//0
     }
 
     private static void testGenerics() {
