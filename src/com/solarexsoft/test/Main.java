@@ -4,6 +4,8 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -15,6 +17,18 @@ public class Main {
         getParamizedFieldType();
         testGenerics();
         testIncrement();
+        testSimpleFormat();
+    }
+
+    private static void testSimpleFormat() {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
+        String date = formatter.format(new Date(1506566460000l));
+        System.out.println(date);
+        String[] dates = date.split(" ");
+        System.out.println(dates[0]);
+        System.out.println(dates[1]);
+        System.out.println(Long.MAX_VALUE);
+        System.out.println(Integer.MAX_VALUE);
     }
 
     private static void testIncrement() {
