@@ -1,13 +1,12 @@
 package com.solarexsoft.test;
 
+import java.io.File;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class Main {
 
@@ -18,6 +17,36 @@ public class Main {
         testGenerics();
         testIncrement();
         testSimpleFormat();
+        testTreeSet();
+
+    }
+
+    private static void testTreeSet() {
+        TreeSet<File> sets = new TreeSet<>(new Comparator<File>() {
+            @Override
+            public int compare(File o1, File o2) {
+                long o1last = o1.lastModified();
+                long o2last = o2.lastModified();
+                long diff = o1last - o2last;
+                System.out.println("o1last = " + o1last + ",o2last = " + o2last + ",diff = " + diff);
+                int ret = (diff == 0) ? 0 : ((diff > 0) ? 1 : -1);
+                return ret;
+            }
+        });
+        File file1 = new File("/Users/houruhou/main.py");
+        file1.setLastModified(System.currentTimeMillis());
+        File file2 = new File("/Users/houruhou/settings.jar");
+        file2.setLastModified(System.currentTimeMillis() - 1000);
+        sets.add(file1);
+        sets.add(file2);
+        Iterator<File> iterator = sets.iterator();
+        System.out.println(sets);
+        System.out.println(sets.descendingSet());
+        while (iterator.hasNext()) {
+            File file = iterator.next();
+            iterator.remove();
+        }
+        System.out.println(sets);
     }
 
     private static void testSimpleFormat() {
@@ -56,10 +85,10 @@ public class Main {
             System.out.println(field);
             System.out.println(field.getType());
             Type tmp = field.getGenericType();
-            if (tmp instanceof ParameterizedType){
+            if (tmp instanceof ParameterizedType) {
                 ParameterizedType tmptmp = (ParameterizedType) tmp;
                 Type[] types = tmptmp.getActualTypeArguments();
-                for (Type type: types){
+                for (Type type : types) {
                     System.out.println(type);
                 }
             }
