@@ -5,8 +5,12 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 public class Main {
 
@@ -18,7 +22,53 @@ public class Main {
         testIncrement();
         testSimpleFormat();
         testTreeSet();
+        testEpoch();
+        testBigDecimal();
+    }
 
+    private static void testBigDecimal() {
+        BigDecimal decimal = new BigDecimal(7.88888889f);
+        System.out.println(decimal.setScale(3, 4).doubleValue());
+        String[] weekday = {"sun", "mon", "tue", "wed", "thr", "fri", "sat"};
+        Date date = new Date();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        int index = calendar.get(Calendar.DAY_OF_WEEK) - 1;
+        System.out.println(weekday[index]);
+    }
+
+    private static void testEpoch() {
+        Date date = new Date();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        //   calendar.add(Calendar.DATE, -7);
+        calendar.set(Calendar.HOUR, 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        calendar.set(Calendar.MILLISECOND, 0);
+        System.out.println(calendar.getTimeInMillis());
+        calendar.add(Calendar.DATE, -1);
+        System.out.println(calendar.getTimeInMillis());
+        calendar.add(Calendar.DATE, -1);
+        System.out.println(calendar.getTimeInMillis());
+        calendar.add(Calendar.DATE, -1);
+        System.out.println(calendar.getTimeInMillis());
+        calendar.add(Calendar.DATE, -1);
+        System.out.println(calendar.getTimeInMillis());
+        calendar.add(Calendar.DATE, -1);
+        System.out.println(calendar.getTimeInMillis());
+        calendar.add(Calendar.DATE, -1);
+        System.out.println(calendar.getTimeInMillis());
+        System.out.println(TimeUnit.DAYS.toMillis(1));
+        float scale = 34.123456f;
+        float result = (float) (Math.round(scale * 100)) / 100;
+        System.out.println(result);
+        DecimalFormat format = new DecimalFormat("##0.00");
+        System.out.println(format.format(scale));
+        System.out.println(TimeUnit.HOURS.toMillis(1));
+        System.out.println(60 * 60 * 1000);
+        System.out.println(TimeUnit.MINUTES.toMillis(1));
+        System.out.println(60 * 1000);
     }
 
     private static void testTreeSet() {
