@@ -24,6 +24,34 @@ public class Main {
         testTreeSet();
         testEpoch();
         testBigDecimal();
+        testTime();
+        testSplit();
+    }
+
+    private static void testSplit() {
+        String str = "剩余1天";
+        String[] split = str.split("\\D+");
+        for (String s : split) {
+            System.out.println(s);
+        }
+        System.out.println(split[1]);
+    }
+
+    private static void testTime() {
+        Date date = new Date();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        System.out.println("----------------------");
+        System.out.println(calendar.getTimeInMillis());
+        calendar.add(Calendar.HOUR, -1);
+        System.out.println(calendar.getTimeInMillis());
+        calendar.add(Calendar.HOUR, -1);
+        System.out.println(calendar.getTimeInMillis());
+        calendar.add(Calendar.DATE, -1);
+        System.out.println("------------------");
+        System.out.println(calendar.getTimeInMillis());
+        calendar.add(Calendar.DATE, -1);
+        System.out.println(calendar.getTimeInMillis());
     }
 
     private static void testBigDecimal() {
@@ -35,6 +63,7 @@ public class Main {
         calendar.setTime(date);
         int index = calendar.get(Calendar.DAY_OF_WEEK) - 1;
         System.out.println(weekday[index]);
+        System.out.println(calendar.get(Calendar.MONTH));
     }
 
     private static void testEpoch() {
