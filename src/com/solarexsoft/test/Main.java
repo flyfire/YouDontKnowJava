@@ -8,7 +8,6 @@ import java.lang.reflect.Type;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
@@ -26,6 +25,15 @@ public class Main {
         testBigDecimal();
         testTime();
         testSplit();
+        testChar();
+    }
+
+    private static void testChar() {
+        ArrayList<String> test = new ArrayList<>();
+        for (char i = 'A'; i <= 'Z'; i++) {
+            test.add(String.valueOf(i));
+        }
+        System.out.println(test);
     }
 
     private static void testSplit() {
