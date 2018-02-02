@@ -26,6 +26,16 @@ public class Main {
         testTime();
         testSplit();
         testChar();
+        testRound();
+    }
+
+    private static void testRound() {
+        float var = (float)24/5;
+        float v = new BigDecimal(var).setScale(0, BigDecimal.ROUND_HALF_UP).floatValue();
+        System.out.println((int)v + "");
+        var = (float)61/5;
+        v = new BigDecimal(var).setScale(0, BigDecimal.ROUND_HALF_UP).floatValue();
+        System.out.println("" + (int)v);
     }
 
     private static void testChar() {
@@ -34,6 +44,10 @@ public class Main {
             test.add(String.valueOf(i));
         }
         System.out.println(test);
+        HashMap<String, Integer> mapping = new HashMap<>();
+        mapping.put("A", 3);
+        mapping.put("B", 4);
+        System.out.println(mapping);
     }
 
     private static void testSplit() {
