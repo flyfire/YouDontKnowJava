@@ -27,15 +27,24 @@ public class Main {
         testSplit();
         testChar();
         testRound();
+        testArr();
     }
 
+    private static void testArr() {
+        Point[] points = new Point[4];
+        for (Point point : points) {
+            System.out.println(point);
+        }
+    }
+
+
     private static void testRound() {
-        float var = (float)24/5;
-        float v = new BigDecimal(var).setScale(0, BigDecimal.ROUND_HALF_UP).floatValue();
-        System.out.println((int)v + "");
-        var = (float)61/5;
-        v = new BigDecimal(var).setScale(0, BigDecimal.ROUND_HALF_UP).floatValue();
-        System.out.println("" + (int)v);
+        float var = (float) 24 / 5;
+        float v = new BigDecimal(var).setScale(0, BigDecimal.ROUND_HALF_UP).intValue()
+        System.out.println(v + "");
+        var = (float) 61 / 5;
+        v = new BigDecimal(var).setScale(0, BigDecimal.ROUND_HALF_UP).intValue()
+        System.out.println("" +v);
     }
 
     private static void testChar() {
@@ -224,5 +233,17 @@ public class Main {
                 System.out.println(clz);
             }
         }
+    }
+}
+
+class Point {
+    String name = "point";
+    int x;
+
+    @Override
+    public String toString() {
+        StringBuffer sb = new StringBuffer();
+        sb.append(name).append(x);
+        return sb.toString();
     }
 }
