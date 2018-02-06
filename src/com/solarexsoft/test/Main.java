@@ -40,11 +40,11 @@ public class Main {
 
     private static void testRound() {
         float var = (float) 24 / 5;
-        float v = new BigDecimal(var).setScale(0, BigDecimal.ROUND_HALF_UP).intValue()
+        float v = new BigDecimal(var).setScale(0, BigDecimal.ROUND_HALF_UP).intValue();
         System.out.println(v + "");
         var = (float) 61 / 5;
-        v = new BigDecimal(var).setScale(0, BigDecimal.ROUND_HALF_UP).intValue()
-        System.out.println("" +v);
+        v = new BigDecimal(var).setScale(0, BigDecimal.ROUND_HALF_UP).intValue();
+        System.out.println("" + v);
     }
 
     private static void testChar() {
