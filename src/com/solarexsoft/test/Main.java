@@ -28,6 +28,22 @@ public class Main {
         testChar();
         testRound();
         testArr();
+        testSinCos();
+        System.out.println(Plan.APlan.name());
+        testRegex();
+    }
+
+    private static void testRegex() {
+        String regex = "[a-zA-Z\\u4e00-\\u9fa5]{1,20}";
+        System.out.println("李小龙".matches(regex));
+        System.out.println("aaa李小龙霍元甲周杰伦".matches(regex));
+    }
+
+    private static void testSinCos() {
+        double angle = Math.PI * 2 / 3;
+        System.out.println(Math.sin(angle));
+        System.out.println(Math.sin(angle*2));
+        System.out.println(Math.sin(angle*3));
     }
 
     private static void testArr() {

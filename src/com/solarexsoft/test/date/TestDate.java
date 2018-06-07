@@ -29,5 +29,18 @@ public class TestDate {
         } catch (ParseException e) {
             e.printStackTrace();
         }
+        format = new SimpleDateFormat("yyyyMMdd HH:mm:ss", Locale.CHINA);
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(new Date());
+        calendar.set(Calendar.HOUR_OF_DAY, 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        calendar.set(Calendar.MILLISECOND, 0);
+        int i = calendar.get(Calendar.DAY_OF_WEEK);
+        System.out.println(i);
+//        calendar.add(Calendar.DATE, 4);
+        calendar.add(Calendar.DATE, -2);
+        Date ret = calendar.getTime();
+        System.out.println(format.format(ret));
     }
 }
