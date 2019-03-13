@@ -33,6 +33,8 @@ public class Main {
         System.out.println(EnumWithVariable.A.getClass());
         System.out.println(EnumWithVariable.B.getClass());
         System.out.println(EnumWithVariable.C.getClass());
+        System.out.println(EnumWithVariable.A.name());
+        System.out.println(EnumWithVariable.A.getxxx());
         ExceptionHandleStrategy.LOG.handle(new RuntimeException("system just broken"));
     }
 
@@ -48,7 +50,7 @@ public class Main {
         C("fit");
 
         private String name;
-        public String getName() {
+        public String getxxx() {
             return this.name;
         }
 
