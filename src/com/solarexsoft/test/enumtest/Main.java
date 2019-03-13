@@ -24,6 +24,36 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        System.out.println(ExceptionHandleStrategy.IGNORE.getClass());
+        System.out.println(ExceptionHandleStrategy.LOG.getClass());
+        System.out.println(ExceptionHandleStrategy.THROW.getClass());
+        System.out.println(EnumWithoutMethod.A.getClass());
+        System.out.println(EnumWithoutMethod.B.getClass());
+        System.out.println(EnumWithoutMethod.C.getClass());
+        System.out.println(EnumWithVariable.A.getClass());
+        System.out.println(EnumWithVariable.B.getClass());
+        System.out.println(EnumWithVariable.C.getClass());
         ExceptionHandleStrategy.LOG.handle(new RuntimeException("system just broken"));
+    }
+
+    enum EnumWithoutMethod {
+        A,
+        B,
+        C;
+    }
+
+    enum EnumWithVariable {
+        A("wristband"),
+        B("glucometer"),
+        C("fit");
+
+        private String name;
+        public String getName() {
+            return this.name;
+        }
+
+        EnumWithVariable(String name){
+            this.name = name;
+        }
     }
 }

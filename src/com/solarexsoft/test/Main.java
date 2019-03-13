@@ -31,6 +31,7 @@ public class Main {
         testSinCos();
         System.out.println(Plan.APlan.name());
         testRegex();
+        System.out.printf("%d", 1234^5678);
     }
 
     private static void testRegex() {
