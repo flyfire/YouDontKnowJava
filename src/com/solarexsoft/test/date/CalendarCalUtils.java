@@ -51,8 +51,8 @@ public class CalendarCalUtils {
         Calendar startCalendar = (Calendar) calendar.clone();
         Calendar endCalendar = (Calendar) calendar.clone();
 
-        int sundayOffset = -(i-1);
-        int saturdayOffset = 7 - i;
+        int sundayOffset = -(i-1) + 1;
+        int saturdayOffset = 7 - i + 1;
         startCalendar.add(Calendar.DATE, sundayOffset);
         endCalendar.add(Calendar.DATE, saturdayOffset);
 

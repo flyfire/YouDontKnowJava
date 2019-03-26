@@ -3,8 +3,6 @@ package com.solarexsoft.test.date;
 import java.util.Calendar;
 import java.util.Date;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 /**
  * Created by houruhou on 2019/3/18.
  * Desc:
@@ -14,6 +12,12 @@ class CalendarCalUtilsTest {
     @org.junit.jupiter.api.Test
     void getWeekStartEndTest() {
         System.out.println(CalendarCalUtils.getWeekStartEnd(new Date()));
+
+        CalendarCalUtils.SelectDays<Date> selectDays = CalendarCalUtils.getWeekStartEnd(new Date());
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(selectDays.getStart());
+        calendar.add(Calendar.DATE, -7);
+        System.out.println(calendar.getTime());
     }
 
     @org.junit.jupiter.api.Test
