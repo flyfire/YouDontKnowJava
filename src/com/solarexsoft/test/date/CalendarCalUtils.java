@@ -117,4 +117,11 @@ public class CalendarCalUtils {
         else
             return 31;
     }
+
+    public static void calHourMinute(int seconds) {
+        int minutes = seconds / 60;
+        int hour = minutes / 60;
+        int minute = minutes % 60;
+        System.out.println(seconds + " s = " + hour + "h" + minute + "m");
+    }
 }

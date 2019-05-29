@@ -1,5 +1,7 @@
 package com.solarexsoft.test.date;
 
+import org.junit.jupiter.api.Test;
+
 import java.util.Calendar;
 import java.util.Date;
 
@@ -33,5 +35,15 @@ class CalendarCalUtilsTest {
 
         int days = CalendarCalUtils.getDaysForMonth(month, year);
         System.out.println(days);
+    }
+
+    @Test
+    void testInteger(){
+        System.out.println(Character.digit('b', 15));
+        System.out.println(Integer.parseInt("abc1", 15));
+    }
+    @Test
+    void testHourMinute() {
+        CalendarCalUtils.calHourMinute(32700);
     }
 }
