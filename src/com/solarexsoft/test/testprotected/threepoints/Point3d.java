@@ -18,4 +18,8 @@ public class Point3d {
         q.y += this.y; // compile-time error: cannot resolve symbol 'y'
         q.z += this.z;
     }
+
+    public void test() {
+        System.out.println("x = " + this.x + ", y = " + this.y + ", z = " + this.z); // compile-time error: cannot resolve symbol 'x','y'
+    }
 }
