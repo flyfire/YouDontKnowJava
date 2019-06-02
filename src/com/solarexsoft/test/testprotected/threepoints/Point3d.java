@@ -9,17 +9,23 @@ import com.solarexsoft.test.testprotected.points.Point;
 public class Point3d {
     protected int z;
     public void delta(Point point) {
+        /*
         point.x += this.x; // compile-time error: cannot resolve symbol 'x'
         point.y += this.y; // compile-time error: cannot resolve symbol 'y'
+        */
     }
 
     public void delta3d(Point3d q) {
+        /*
         q.x += this.x; // compile-time error: cannot resolve symbol 'x'
         q.y += this.y; // compile-time error: cannot resolve symbol 'y'
         q.z += this.z;
+        */
     }
 
     public void test() {
+        /*
         System.out.println("x = " + this.x + ", y = " + this.y + ", z = " + this.z); // compile-time error: cannot resolve symbol 'x','y'
+        */
     }
 }

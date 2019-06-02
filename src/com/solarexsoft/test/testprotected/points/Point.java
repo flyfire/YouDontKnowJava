@@ -9,8 +9,10 @@ import com.solarexsoft.test.testprotected.threepoints.Point3d;
 public class Point {
     protected int x, y;
     void wrap(Point3d point3d) {
+        /*
         if (point3d.z > 0) { // z has protected access in threepoints.Point3d
             point3d.delta(this);
         }
+        */
     }
 }
