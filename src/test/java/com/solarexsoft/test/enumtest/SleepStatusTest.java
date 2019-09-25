@@ -1,14 +1,14 @@
 package com.solarexsoft.test.enumtest;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 /**
- * Created by houruhou on 2019/3/21.
+ * Created by houruhou on 2019/9/25.
  * Desc:
  */
-class SleepStatusTest {
+public class SleepStatusTest {
     @Test
     public void testSleep() {
         System.out.println(SleepStatus.valueOf("terrible").ordinal());

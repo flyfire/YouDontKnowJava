@@ -1,18 +1,19 @@
 package com.solarexsoft.test.date;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.util.Calendar;
 import java.util.Date;
 
+import static org.junit.Assert.*;
+
 /**
- * Created by houruhou on 2019/3/18.
+ * Created by houruhou on 2019/9/25.
  * Desc:
  */
-class CalendarCalUtilsTest {
-
-    @org.junit.jupiter.api.Test
-    void getWeekStartEndTest() {
+public class CalendarCalUtilsTest {
+    @Test
+    public void getWeekStartEndTest() {
         System.out.println(CalendarCalUtils.getWeekStartEnd(new Date()));
 
         CalendarCalUtils.SelectDays<Date> selectDays = CalendarCalUtils.getWeekStartEnd(new Date());
@@ -22,13 +23,13 @@ class CalendarCalUtilsTest {
         System.out.println(calendar.getTime());
     }
 
-    @org.junit.jupiter.api.Test
-    void getMonthStartEndTest() {
+    @Test
+    public void getMonthStartEndTest() {
         System.out.println(CalendarCalUtils.getMonthStartEnd(new Date()));
     }
 
-    @org.junit.jupiter.api.Test
-    void getDaysForMonthTest() {
+    @Test
+    public void getDaysForMonthTest() {
         Calendar calendar = Calendar.getInstance();
         int year = calendar.get(Calendar.YEAR);
         int month = calendar.get(Calendar.MONTH);
@@ -38,12 +39,12 @@ class CalendarCalUtilsTest {
     }
 
     @Test
-    void testInteger(){
+    public void testInteger(){
         System.out.println(Character.digit('b', 15));
         System.out.println(Integer.parseInt("abc1", 15));
     }
     @Test
-    void testHourMinute() {
+    public void testHourMinute() {
         CalendarCalUtils.calHourMinute(32700);
     }
 }
