@@ -1,0 +1,96 @@
+Classfile /Users/houruhou/Workspace/Solarex/IDEAWorkspace/Test/out/production/Test/com/solarexsoft/test/enumtest/Main$ExceptionHandleStrategy$1.class
+  Last modified Jul 2, 2018; size 1015 bytes
+  MD5 checksum 9bb83a58d06ac62e6e43e410c9f06f77
+  Compiled from "Main.java"
+final class com.solarexsoft.test.enumtest.Main$ExceptionHandleStrategy$1 extends com.solarexsoft.test.enumtest.Main$ExceptionHandleStrategy
+  minor version: 0
+  major version: 52
+  flags: ACC_FINAL, ACC_SUPER, ACC_ENUM
+Constant pool:
+   #1 = Methodref          #6.#23         // com/solarexsoft/test/enumtest/Main$ExceptionHandleStrategy."<init>":(Ljava/lang/String;ILcom/solarexsoft/test/enumtest/Main$1;)V
+   #2 = Fieldref           #24.#25        // java/lang/System.out:Ljava/io/PrintStream;
+   #3 = Methodref          #26.#27        // java/lang/Exception.getLocalizedMessage:()Ljava/lang/String;
+   #4 = Methodref          #28.#29        // java/io/PrintStream.println:(Ljava/lang/String;)V
+   #5 = Class              #30            // com/solarexsoft/test/enumtest/Main$ExceptionHandleStrategy$1
+   #6 = Class              #32            // com/solarexsoft/test/enumtest/Main$ExceptionHandleStrategy
+   #7 = Utf8               <init>
+   #8 = Utf8               (Ljava/lang/String;I)V
+   #9 = Utf8               Code
+  #10 = Utf8               LineNumberTable
+  #11 = Utf8               LocalVariableTable
+  #12 = Utf8               this
+  #13 = Utf8               ExceptionHandleStrategy
+  #14 = Utf8               InnerClasses
+  #15 = Utf8               Lcom/solarexsoft/test/enumtest/Main$ExceptionHandleStrategy$1;
+  #16 = Utf8               handle
+  #17 = Utf8               (Ljava/lang/Exception;)V
+  #18 = Utf8               e
+  #19 = Utf8               Ljava/lang/Exception;
+  #20 = Utf8               SourceFile
+  #21 = Utf8               Main.java
+  #22 = Utf8               EnclosingMethod
+  #23 = NameAndType        #7:#34         // "<init>":(Ljava/lang/String;ILcom/solarexsoft/test/enumtest/Main$1;)V
+  #24 = Class              #35            // java/lang/System
+  #25 = NameAndType        #36:#37        // out:Ljava/io/PrintStream;
+  #26 = Class              #38            // java/lang/Exception
+  #27 = NameAndType        #39:#40        // getLocalizedMessage:()Ljava/lang/String;
+  #28 = Class              #41            // java/io/PrintStream
+  #29 = NameAndType        #42:#43        // println:(Ljava/lang/String;)V
+  #30 = Utf8               com/solarexsoft/test/enumtest/Main$ExceptionHandleStrategy$1
+  #31 = Class              #44            // com/solarexsoft/test/enumtest/Main
+  #32 = Utf8               com/solarexsoft/test/enumtest/Main$ExceptionHandleStrategy
+  #33 = Class              #45            // com/solarexsoft/test/enumtest/Main$1
+  #34 = Utf8               (Ljava/lang/String;ILcom/solarexsoft/test/enumtest/Main$1;)V
+  #35 = Utf8               java/lang/System
+  #36 = Utf8               out
+  #37 = Utf8               Ljava/io/PrintStream;
+  #38 = Utf8               java/lang/Exception
+  #39 = Utf8               getLocalizedMessage
+  #40 = Utf8               ()Ljava/lang/String;
+  #41 = Utf8               java/io/PrintStream
+  #42 = Utf8               println
+  #43 = Utf8               (Ljava/lang/String;)V
+  #44 = Utf8               com/solarexsoft/test/enumtest/Main
+  #45 = Utf8               com/solarexsoft/test/enumtest/Main$1
+{
+  com.solarexsoft.test.enumtest.Main$ExceptionHandleStrategy$1(java.lang.String, int);
+    descriptor: (Ljava/lang/String;I)V
+    flags:
+    Code:
+      stack=4, locals=3, args_size=3
+         0: aload_0
+         1: aload_1
+         2: iload_2
+         3: aconst_null
+         4: invokespecial #1                  // Method com/solarexsoft/test/enumtest/Main$ExceptionHandleStrategy."<init>":(Ljava/lang/String;ILcom/solarexsoft/test/enumtest/Main$1;)V
+         7: return
+      LineNumberTable:
+        line 9: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lcom/solarexsoft/test/enumtest/Main$ExceptionHandleStrategy$1;
+
+  public void handle(java.lang.Exception);
+    descriptor: (Ljava/lang/Exception;)V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         3: aload_1
+         4: invokevirtual #3                  // Method java/lang/Exception.getLocalizedMessage:()Ljava/lang/String;
+         7: invokevirtual #4                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        10: return
+      LineNumberTable:
+        line 12: 0
+        line 13: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lcom/solarexsoft/test/enumtest/Main$ExceptionHandleStrategy$1;
+            0      11     1     e   Ljava/lang/Exception;
+}
+SourceFile: "Main.java"
+EnclosingMethod: #6.#0                  // com.solarexsoft.test.enumtest.Main$ExceptionHandleStrategy
+InnerClasses:
+     static #13= #6 of #31; //ExceptionHandleStrategy=class com/solarexsoft/test/enumtest/Main$ExceptionHandleStrategy of class com/solarexsoft/test/enumtest/Main
+     static #5; //class com/solarexsoft/test/enumtest/Main$ExceptionHandleStrategy$1
+     static #33; //class com/solarexsoft/test/enumtest/Main$1
