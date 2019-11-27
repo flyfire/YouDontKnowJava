@@ -31,5 +31,10 @@ public class StringTest {
         System.out.println(System.identityHashCode(test1));
         System.out.println(System.identityHashCode(test2));
         System.out.println(test1 == test2);
+        String xxx = "aa" + "bb" + "cc";
+        String yyy = "aabbcc";
+        System.out.println(System.identityHashCode(xxx));
+        System.out.println(System.identityHashCode(yyy));
+        System.out.println(xxx == yyy);
     }
 }
