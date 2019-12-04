@@ -1,0 +1,186 @@
+javap -verbose GenericsTest
+Classfile /Users/houruhou/Workspace/Solarex/IDEAWorkspace/Test/out/production/Test/com/solarexsoft/test/GenericsTest.class
+  Last modified May 21, 2017; size 1458 bytes
+  MD5 checksum c5bc07df80d530bd052746f5054196cc
+  Compiled from "GenericsTest.java"
+public class com.solarexsoft.test.GenericsTest<K extends java.lang.Object, V extends java.lang.Object> extends java.lang.Object
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #13.#42        // java/lang/Object."<init>":()V
+   #2 = Fieldref           #43.#44        // java/lang/System.out:Ljava/io/PrintStream;
+   #3 = String             #27            // test
+   #4 = Methodref          #45.#46        // java/io/PrintStream.println:(Ljava/lang/String;)V
+   #5 = Methodref          #13.#47        // java/lang/Object.getClass:()Ljava/lang/Class;
+   #6 = Methodref          #45.#48        // java/io/PrintStream.println:(Ljava/lang/Object;)V
+   #7 = String             #49            // --------
+   #8 = String             #34            // testk
+   #9 = Class              #50            // com/solarexsoft/test/GenericsTest$A
+  #10 = Methodref          #9.#42         // com/solarexsoft/test/GenericsTest$A."<init>":()V
+  #11 = Methodref          #12.#51        // com/solarexsoft/test/GenericsTest.test:(Ljava/lang/Object;)Ljava/lang/Object;
+  #12 = Class              #52            // com/solarexsoft/test/GenericsTest
+  #13 = Class              #53            // java/lang/Object
+  #14 = Class              #54            // com/solarexsoft/test/GenericsTest$B
+  #15 = Utf8               B
+  #16 = Utf8               InnerClasses
+  #17 = Utf8               A
+  #18 = Utf8               <init>
+  #19 = Utf8               ()V
+  #20 = Utf8               Code
+  #21 = Utf8               LineNumberTable
+  #22 = Utf8               LocalVariableTable
+  #23 = Utf8               this
+  #24 = Utf8               Lcom/solarexsoft/test/GenericsTest;
+  #25 = Utf8               LocalVariableTypeTable
+  #26 = Utf8               Lcom/solarexsoft/test/GenericsTest<TK;TV;>;
+  #27 = Utf8               test
+  #28 = Utf8               (Ljava/lang/Object;)Ljava/lang/Object;
+  #29 = Utf8               k
+  #30 = Utf8               Ljava/lang/Object;
+  #31 = Utf8               TK;
+  #32 = Utf8               Signature
+  #33 = Utf8               <K:Ljava/lang/Object;V:Ljava/lang/Object;>(TK;)TK;
+  #34 = Utf8               testk
+  #35 = Utf8               (TK;)TK;
+  #36 = Utf8               test1
+  #37 = Utf8               a
+  #38 = Utf8               Lcom/solarexsoft/test/GenericsTest$A;
+  #39 = Utf8               <K:Ljava/lang/Object;V:Ljava/lang/Object;>Ljava/lang/Object;
+  #40 = Utf8               SourceFile
+  #41 = Utf8               GenericsTest.java
+  #42 = NameAndType        #18:#19        // "<init>":()V
+  #43 = Class              #55            // java/lang/System
+  #44 = NameAndType        #56:#57        // out:Ljava/io/PrintStream;
+  #45 = Class              #58            // java/io/PrintStream
+  #46 = NameAndType        #59:#60        // println:(Ljava/lang/String;)V
+  #47 = NameAndType        #61:#62        // getClass:()Ljava/lang/Class;
+  #48 = NameAndType        #59:#63        // println:(Ljava/lang/Object;)V
+  #49 = Utf8               --------
+  #50 = Utf8               com/solarexsoft/test/GenericsTest$A
+  #51 = NameAndType        #27:#28        // test:(Ljava/lang/Object;)Ljava/lang/Object;
+  #52 = Utf8               com/solarexsoft/test/GenericsTest
+  #53 = Utf8               java/lang/Object
+  #54 = Utf8               com/solarexsoft/test/GenericsTest$B
+  #55 = Utf8               java/lang/System
+  #56 = Utf8               out
+  #57 = Utf8               Ljava/io/PrintStream;
+  #58 = Utf8               java/io/PrintStream
+  #59 = Utf8               println
+  #60 = Utf8               (Ljava/lang/String;)V
+  #61 = Utf8               getClass
+  #62 = Utf8               ()Ljava/lang/Class;
+  #63 = Utf8               (Ljava/lang/Object;)V
+{
+  public com.solarexsoft.test.GenericsTest();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 6: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lcom/solarexsoft/test/GenericsTest;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lcom/solarexsoft/test/GenericsTest<TK;TV;>;
+
+  public <K extends java.lang.Object, V extends java.lang.Object> K test(K);
+    descriptor: (Ljava/lang/Object;)Ljava/lang/Object;
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         3: ldc           #3                  // String test
+         5: invokevirtual #4                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+         8: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        11: aload_1
+        12: invokevirtual #5                  // Method java/lang/Object.getClass:()Ljava/lang/Class;
+        15: invokevirtual #6                  // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+        18: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        21: ldc           #7                  // String --------
+        23: invokevirtual #4                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        26: aload_1
+        27: areturn
+      LineNumberTable:
+        line 8: 0
+        line 10: 8
+        line 11: 18
+        line 12: 26
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      28     0  this   Lcom/solarexsoft/test/GenericsTest;
+            0      28     1     k   Ljava/lang/Object;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      28     0  this   Lcom/solarexsoft/test/GenericsTest<TK;TV;>;
+            0      28     1     k   TK;
+    Signature: #33                          // <K:Ljava/lang/Object;V:Ljava/lang/Object;>(TK;)TK;
+
+  public K testk(K);
+    descriptor: (Ljava/lang/Object;)Ljava/lang/Object;
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         3: ldc           #8                  // String testk
+         5: invokevirtual #4                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+         8: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        11: aload_1
+        12: invokevirtual #5                  // Method java/lang/Object.getClass:()Ljava/lang/Class;
+        15: invokevirtual #6                  // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+        18: aload_1
+        19: areturn
+      LineNumberTable:
+        line 16: 0
+        line 20: 8
+        line 21: 18
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      20     0  this   Lcom/solarexsoft/test/GenericsTest;
+            0      20     1     k   Ljava/lang/Object;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      20     0  this   Lcom/solarexsoft/test/GenericsTest<TK;TV;>;
+            0      20     1     k   TK;
+    Signature: #35                          // (TK;)TK;
+
+  public K test1(K);
+    descriptor: (Ljava/lang/Object;)Ljava/lang/Object;
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=2
+         0: new           #9                  // class com/solarexsoft/test/GenericsTest$A
+         3: dup
+         4: invokespecial #10                 // Method com/solarexsoft/test/GenericsTest$A."<init>":()V
+         7: astore_2
+         8: aload_0
+         9: aload_2
+        10: invokevirtual #11                 // Method test:(Ljava/lang/Object;)Ljava/lang/Object;
+        13: pop
+        14: aconst_null
+        15: areturn
+      LineNumberTable:
+        line 31: 0
+        line 32: 8
+        line 33: 14
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      16     0  this   Lcom/solarexsoft/test/GenericsTest;
+            0      16     1     k   Ljava/lang/Object;
+            8       8     2     a   Lcom/solarexsoft/test/GenericsTest$A;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      16     0  this   Lcom/solarexsoft/test/GenericsTest<TK;TV;>;
+            0      16     1     k   TK;
+    Signature: #35                          // (TK;)TK;
+}
+Signature: #39                          // <K:Ljava/lang/Object;V:Ljava/lang/Object;>Ljava/lang/Object;
+SourceFile: "GenericsTest.java"
+InnerClasses:
+     public static #15= #14 of #12; //B=class com/solarexsoft/test/GenericsTest$B of class com/solarexsoft/test/GenericsTest
+     public static #17= #9 of #12; //A=class com/solarexsoft/test/GenericsTest$A of class com/solarexsoft/test/GenericsTest
