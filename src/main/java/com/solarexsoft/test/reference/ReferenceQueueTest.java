@@ -24,7 +24,8 @@ public class ReferenceQueueTest {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
-        t.setShutdown(true);
+//        t.setShutdown(true);
+        t.interrupt();
         System.out.println("sleep 后: " + t.isAlive());
         System.out.println("main");
     }
@@ -47,6 +48,7 @@ public class ReferenceQueueTest {
                     }
                 } catch (InterruptedException e) {
                     e.printStackTrace();
+                    break;
                 }
                 System.out.println(++count);
             }
