@@ -19,14 +19,15 @@ public class ReferenceQueueTest {
         str = null;
         System.gc();
         System.out.println("gc后：" + weakReference.get());
-        System.out.println(t.isAlive());
+        System.out.println("sleep前，线程存活状态" + t.isAlive());
+        t.interrupt();
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
 //        t.setShutdown(true);
-        t.interrupt();
-        System.out.println("sleep 后: " + t.isAlive());
+
+        System.out.println("sleep 后,线程存活状态: " + t.isAlive());
         System.out.println("main");
     }
 
