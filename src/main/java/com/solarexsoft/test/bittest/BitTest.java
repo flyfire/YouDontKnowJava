@@ -12,5 +12,6 @@ public class BitTest {
         System.out.println(Integer.toBinaryString(-8));
         System.out.println(Integer.toBinaryString(-8>>1));
         System.out.println(Integer.toBinaryString(-8>>>1));
+        System.out.println(Integer.toBinaryString(~1));
     }
 }

@@ -1,8 +1,11 @@
 package com.solarexsoft.test.threadtest;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.lang.management.ManagementFactory;
 import java.lang.management.ThreadMXBean;
 import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
@@ -26,11 +29,21 @@ public class ExecutorTest {
                 e.printStackTrace();
             }
         }
+
+        @Override
+        public String toString() {
+            return String.valueOf(i);
+        }
     }
 
     public static void main(String[] args) {
         LinkedBlockingQueue<Runnable> queue = new LinkedBlockingQueue<>(5);
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(2,5,60, TimeUnit.SECONDS,queue);
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 5, 60, TimeUnit.SECONDS, queue, new ThreadFactory() {
+            @Override
+            public Thread newThread(@NotNull Runnable r) {
+                return new Thread(r, r.toString());
+            }
+        });
         for (int i = 0; i < 10; i++) {
             executor.execute(new InnerRunnable(i));
         }
