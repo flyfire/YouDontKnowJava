@@ -23,3 +23,10 @@ public class PeiQi extends Pig<Integer, Boolean> {
         }
     }
 }
+
+/*
+class com.solarexsoft.test.generics.Pig
+com.solarexsoft.test.generics.Pig<java.lang.Integer, java.lang.Boolean>
+class java.lang.Integer
+class java.lang.Boolean
+ */
