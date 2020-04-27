@@ -18,10 +18,14 @@ fun onLoading(curVideoId: Int): Unit {
 }
 
 fun onFinish():Unit {
-    
+
 }
 
 fun main() {
+    var a = 60_000L
+    println(a)
+    a = 60_000_000_000L
+    println(a)
     play(::onLoading, ::onFinish)
     setProgress(::onLoading) { println("hi") }
 }
