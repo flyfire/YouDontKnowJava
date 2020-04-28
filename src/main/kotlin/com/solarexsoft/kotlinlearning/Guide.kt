@@ -1,5 +1,7 @@
 package com.solarexsoft.kotlinlearning
 
+import java.util.concurrent.CopyOnWriteArrayList
+
 /**
  * Created by Solarex on 2020/4/28/4:29 PM
  * Desc:
@@ -14,7 +16,7 @@ data class GuideData(
 
 class GuideQueue {
     private val TAG = "GuideQueue"
-    private val guideMap = hashMapOf<String, ArrayList<GuideData>>()
+    private val guideMap = hashMapOf<String, CopyOnWriteArrayList<GuideData>>()
 
     fun next(token: String) {
         guideMap[token]?.firstOrNull{ !it.locked && it.requestTime > 0}.let {
@@ -40,30 +42,32 @@ class GuideQueue {
     }
 
     fun enqueue(token: String, vararg guideData: GuideData) {
-        val queue = guideMap.getOrPut(token, {arrayListOf<GuideData>()})
+        val queue = guideMap.getOrPut(token, {CopyOnWriteArrayList<GuideData>()})
         for (newGuide in guideData) {
+            println("-------------------------")
+            println(newGuide)
             if (queue.isEmpty()) {
                 queue.add(newGuide)
-                println(queue)
+                println("empty -> $queue")
             } else {
                 run breaker@{
-                    // java.util.ConcurrentModificationException
-                    /*
                     queue.forEachIndexed{
                         index, guideData ->
                         if (newGuide.number == guideData.number) {
+                            println("$index number equals")
                             return@breaker
                         }
                         if (newGuide.number < guideData.number) {
+                            println("$index number low")
                             queue.add(index, newGuide)
                             return@breaker
                         }
                         if (index == queue.lastIndex){
+                            println("$index lastIndex")
                             queue.add(newGuide)
                         }
-                        println(queue)
+                        println("$index -> $queue")
                     }
-                     */
                 }
             }
         }
