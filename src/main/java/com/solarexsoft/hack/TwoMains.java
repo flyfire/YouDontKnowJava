@@ -5,12 +5,12 @@ package com.solarexsoft.hack;
  * Desc:
  */
 public class TwoMains {
-    public static void main(String[] args) {
-        System.out.println("main->0");
-        main(args);
-    }
-
-    public static void main(String[] args) {
-        System.out.println("main->1");
-    }
+//    public static void main(String[] args) {
+//        System.out.println("main->0");
+//        main(args);
+//    }
+//
+//    public static void main(String[] args) {
+//        System.out.println("main->1");
+//    }
 }
