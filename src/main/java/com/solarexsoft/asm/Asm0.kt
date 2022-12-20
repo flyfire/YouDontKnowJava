@@ -1,4 +1,4 @@
-package com.solarexsoft
+package com.solarexsoft.asm
 
 import jdk.internal.org.objectweb.asm.ClassReader
 import jdk.internal.org.objectweb.asm.Opcodes
